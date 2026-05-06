@@ -1602,19 +1602,22 @@
     note.style.color = '#B8B4AC';
 
     try {
+      const formData = new FormData();
+      formData.append('email', email);
+      formData.append('source', 'BuildFlow Landing Page Waitlist');
+
       const res = await fetch('https://formspree.io/f/meenkrep', {
         method: 'POST',
-        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email, source: 'BuildFlow Landing Page Waitlist' })
+        headers: { 'Accept': 'application/json' },
+        body: formData
       });
-
-      const data = await res.json();
 
       if (res.ok) {
         note.textContent = "You're on the list! We'll be in touch soon.";
         note.style.color = '#22C55E';
         emailInput.value = '';
       } else {
+        const data = await res.json();
         throw new Error(data.error || 'Server error');
       }
     } catch (err) {
