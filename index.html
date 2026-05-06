@@ -1586,7 +1586,7 @@
   });
   calcROI();
 
-  // Waitlist — submits to Formspree
+  // Waitlist — submits to Beehiiv API
   async function handleWaitlist() {
     const emailInput = document.getElementById('email-input');
     const note = document.getElementById('waitlist-note');
@@ -1601,22 +1601,36 @@
     note.textContent = 'Submitting...';
     note.style.color = '#B8B4AC';
 
-    // Always show success to user — no-cors mode ensures delivery
-    // even without a readable response
-    fetch('https://formspree.io/f/meenkrep', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: 'email=' + encodeURIComponent(email) + '&source=BuildFlow+Waitlist'
-    });
+    try {
+      const res = await fetch('https://api.beehiiv.com/v2/publications/pub_a587b7e4-e752-4c48-bd7d-f74c0c895fea/subscriptions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer U4JCUgrYy476F2EajTvbikKNjaBsmKng0GFMBuzB7ajTB79gwljwmXJLz61zRLvb'
+        },
+        body: JSON.stringify({
+          email: email,
+          reactivate_existing: true,
+          send_welcome_email: true,
+          utm_source: 'landing_page',
+          utm_medium: 'waitlist_form',
+          utm_campaign: 'buildflow_beta'
+        })
+      });
 
-    // Show success immediately — no-cors means we can't read the response
-    // but Formspree will still receive and process the submission
-    setTimeout(() => {
-      note.textContent = "You're on the list! We'll be in touch soon.";
-      note.style.color = '#22C55E';
-      emailInput.value = '';
-    }, 800);
+      const data = await res.json();
+
+      if (res.ok || res.status === 201) {
+        note.textContent = "You're on the list! We'll be in touch soon.";
+        note.style.color = '#22C55E';
+        emailInput.value = '';
+      } else {
+        throw new Error(data.message || 'Server error');
+      }
+    } catch (err) {
+      note.textContent = "Something went wrong. Email us at hello@msystemsai.com";
+      note.style.color = '#FF6B6B';
+    }
   }
 
   document.getElementById('email-input').addEventListener('keydown', function(e) {
