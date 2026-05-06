@@ -1586,7 +1586,7 @@
   });
   calcROI();
 
-  // Waitlist — submits to Kit (ConvertKit) form f2aa21e135
+  // Waitlist — submits to Formspree (emails malcolm@msystemsai.com on every signup)
   async function handleWaitlist() {
     const emailInput = document.getElementById('email-input');
     const note = document.getElementById('waitlist-note');
@@ -1602,29 +1602,24 @@
     note.style.color = '#B8B4AC';
 
     try {
-      const formData = new FormData();
-      formData.append('email_address', email);
-      formData.append('tags[]', 'waitlist');
-
-      const res = await fetch('https://app.kit.com/forms/f2aa21e135/subscriptions', {
+      const res = await fetch('https://formspree.io/f/meenkrep', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, source: 'BuildFlow Landing Page Waitlist' })
       });
 
-      if (res.ok || res.status === 200 || res.status === 201) {
+      const data = await res.json();
+
+      if (res.ok) {
         note.textContent = "You're on the list! We'll be in touch soon.";
         note.style.color = '#22C55E';
         emailInput.value = '';
       } else {
-        throw new Error('Server error');
+        throw new Error(data.error || 'Server error');
       }
     } catch (err) {
-      // Fallback: open Kit form in new tab so no lead is lost
-      window.open('https://m-systems.kit.com/f2aa21e135', '_blank');
-      note.textContent = "You're on the list! We'll be in touch soon.";
-      note.style.color = '#22C55E';
-      emailInput.value = '';
+      note.textContent = "Something went wrong. Email us at hello@msystemsai.com";
+      note.style.color = '#FF6B6B';
     }
   }
 
