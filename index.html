@@ -1602,21 +1602,11 @@
     note.style.color = '#B8B4AC';
 
     try {
-      const res = await fetch('https://api.beehiiv.com/v2/publications/pub_a587b7e4-e752-4c48-bd7d-f74c0c895fea/subscriptions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer U4JCUgrYy476F2EajTvbikKNjaBsmKng0GFMBuzB7ajTB79gwljwmXJLz61zRLvb'
-        },
-        body: JSON.stringify({
-          email: email,
-          reactivate_existing: true,
-          send_welcome_email: true,
-          utm_source: 'landing_page',
-          utm_medium: 'waitlist_form',
-          utm_campaign: 'buildflow_beta'
-        })
-      });
+     const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email })
+        });
 
       const data = await res.json();
 
