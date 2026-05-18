@@ -456,16 +456,23 @@ async function sendMessage() {
 
     const data = await response.json();
     hideTyping();
+    console.log('Chat API response:', response.status, data);
 
     if (data.content && data.content[0] && data.content[0].text) {
       const reply = data.content[0].text;
       conversationHistory.push({ role: 'assistant', content: reply });
       addBotMessage(reply);
     } else if (data.error) {
+      const errMsg = data.error.message || data.error;
+      console.error('Chat API error:', errMsg);
       addBotMessage("I'm having a quick technical hiccup. You can reach Malcolm directly at **hello@msystemsai.com** — he responds fast.");
+    } else {
+      console.error('Unexpected response:', data);
+      addBotMessage("Something unexpected happened. Email Malcolm at **hello@msystemsai.com** or book a demo at **calendly.com/malcolm-msystemsai/30min**.");
     }
   } catch (err) {
     hideTyping();
+    console.error('Chat fetch failed:', err);
     addBotMessage("Looks like there's a connection issue. You can always reach Malcolm directly at **hello@msystemsai.com** or book a demo at **calendly.com/malcolm-msystemsai/30min**.");
   }
 
