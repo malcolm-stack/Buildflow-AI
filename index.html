@@ -3,81 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- ── PRIMARY SEO ── -->
-<title>BuildFlow AI — AI Bid Tracking & Schedule Software for Contractors</title>
-<meta name="description" content="BuildFlow AI automates bid tracking, blueprint parsing, subcontractor emails, and project scheduling for small contractors. Save 10+ hours per week. Try free for 7 days."/>
-<meta name="keywords" content="construction bid tracking software, AI contractor tools, bid management software, project schedule generator, subcontractor bid tracker, blueprint parser AI, construction automation, bid to schedule, contractor software, small contractor tools, BuildFlow AI"/>
-<meta name="author" content="M Systems AI"/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://buildflow.us"/>
-<meta name="google-site-verification" content="_BZtG2Cx0M_Jvs2Pi1TiShM82KW_IKBi_bBXt600Tks"/>
-
-<!-- ── OPEN GRAPH (Facebook, LinkedIn previews) ── -->
-<meta property="og:type" content="website"/>
-<meta property="og:url" content="https://buildflow.us"/>
-<meta property="og:title" content="BuildFlow AI — From Blueprint to Schedule in Minutes"/>
-<meta property="og:description" content="Stop spending 10 hours a week chasing bids. BuildFlow AI automates your entire bid-to-schedule workflow. Upload a blueprint, get a schedule. Try free."/>
-<meta property="og:image" content="https://buildflow.us/og-image.png"/>
-<meta property="og:site_name" content="BuildFlow AI"/>
-<meta property="og:locale" content="en_US"/>
-
-<!-- ── TWITTER CARD ── -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:url" content="https://buildflow.us"/>
-<meta name="twitter:title" content="BuildFlow AI — AI Bid Tracking for Contractors"/>
-<meta name="twitter:description" content="Automate your entire bid-to-schedule workflow. Blueprint parsing, bid emails, response tracking, and project scheduling — all in one tool."/>
-<meta name="twitter:image" content="https://buildflow.us/og-image.png"/>
-
-<!-- ── LOCAL BUSINESS SCHEMA (helps Google rank local searches) ── -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "BuildFlow AI",
-  "applicationCategory": "BusinessApplication",
-  "operatingSystem": "Web",
-  "description": "AI-powered bid tracking and project scheduling software for small to mid-market construction contractors. Automates blueprint parsing, bid request emails, response tracking, deadline alerts, and schedule generation.",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Per Project",
-      "price": "75.00",
-      "priceCurrency": "USD",
-      "description": "Pay per project processed. No monthly commitment."
-    },
-    {
-      "@type": "Offer",
-      "name": "Monthly Unlimited",
-      "price": "400.00",
-      "priceCurrency": "USD",
-      "description": "Unlimited projects per month. All features included."
-    }
-  ],
-  "creator": {
-    "@type": "Organization",
-    "name": "M Systems AI",
-    "url": "https://buildflow.us",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lawrence",
-      "addressRegion": "KS",
-      "addressCountry": "US"
-    }
-  },
-  "url": "https://buildflow.us",
-  "screenshot": "https://buildflow.us/og-image.png",
-  "featureList": [
-    "AI Blueprint Parsing",
-    "Automated Bid Request Emails",
-    "Real-time Bid Response Tracking",
-    "Deadline Alert System",
-    "AI Project Schedule Generator",
-    "Google Sheets Export"
-  ]
-}
-</script>
-
+<title>BuildFlow AI — Bid-to-Schedule AI Engine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
@@ -467,12 +393,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
     transition: border-color 0.3s, background 0.3s;
+    color: var(--amber);
   }
+
+  .step-icon svg { width: 22px; height: 22px; }
 
   .workflow-step:hover .step-icon {
     border-color: rgba(244,162,40,0.6);
@@ -587,9 +515,9 @@
     margin-top: 1px;
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 0.7rem;
-    font-weight: 700;
   }
+
+  .ps-icon svg { width: 10px; height: 10px; }
 
   .ps-card.before .ps-icon { background: rgba(255,107,107,0.15); color: #FF6B6B; }
   .ps-card.after .ps-icon { background: rgba(34,197,94,0.15); color: var(--green); }
@@ -662,9 +590,11 @@
     border: 1px solid rgba(244,162,40,0.2);
     border-radius: var(--radius-lg);
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.1rem;
     margin-bottom: 20px;
+    color: var(--amber);
   }
+
+  .feat-icon-wrap svg { width: 20px; height: 20px; }
 
   .feat-card h4 {
     font-family: 'Syne', sans-serif;
@@ -793,9 +723,10 @@
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
-    font-size: 0.6rem;
     color: var(--green);
   }
+
+  .plan-features li .check svg { width: 10px; height: 10px; }
 
   /* ── ROI CALCULATOR ── */
   .roi-wrap {
@@ -1160,7 +1091,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#roi">ROI Calculator</a></li>
-    <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
+    <li><a href="#waitlist" class="nav-cta">Request access</a></li>
   </ul>
 </nav>
 
@@ -1169,36 +1100,31 @@
   <div class="hero-glow"></div>
   <span class="badge">
     <span class="dot"></span>
-    Now in beta — design partners welcome
+    Currently in private beta
   </span>
-  <h1>From blueprint to<br/><span class="highlight">schedule in minutes.</span></h1>
-  <p class="hero-sub">BuildFlow AI automates the entire bid tracking workflow for construction contractors — upload a blueprint, we handle everything else.</p>
+  <h1>Bid tracking that runs <span class="highlight">in the background.</span></h1>
+  <p class="hero-sub">BuildFlow turns blueprints into bid requests, tracks every response, and builds your schedule from the confirmed bids. Designed for small and mid-market general contractors.</p>
   <div class="hero-cta-group">
     <a href="#waitlist" class="btn-primary">
-      Join the Waitlist
+      Request beta access
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <a href="#how-it-works" class="btn-secondary">See how it works</a>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
-      <div class="num">10h</div>
-      <div class="lbl">saved per week</div>
+      <div class="num">~8h</div>
+      <div class="lbl">reclaimed per week</div>
     </div>
     <div class="stat-divider"></div>
     <div class="hero-stat">
       <div class="num">$400</div>
-      <div class="lbl">per month flat</div>
+      <div class="lbl">flat monthly rate</div>
     </div>
     <div class="stat-divider"></div>
     <div class="hero-stat">
-      <div class="num">5x</div>
-      <div class="lbl">avg ROI</div>
-    </div>
-    <div class="stat-divider"></div>
-    <div class="hero-stat">
-      <div class="num">0%</div>
-      <div class="lbl">bids missed</div>
+      <div class="num">&lt; 5s</div>
+      <div class="lbl">blueprint to line items</div>
     </div>
   </div>
 </section>
@@ -1207,43 +1133,53 @@
 <section class="section" id="how-it-works">
   <div class="workflow">
     <div class="section-label">How it works</div>
-    <h2 class="section-title">Five steps. Zero manual work.</h2>
-    <p class="section-sub">BuildFlow connects every stage of the bid process — from the moment you get a blueprint to the moment your schedule is live.</p>
+    <h2 class="section-title">From blueprint to live schedule.</h2>
+    <p class="section-sub">Each step replaces hours of manual coordination that currently lives in spreadsheets, inboxes, and PMs' heads.</p>
 
     <div class="workflow-steps">
       <div class="workflow-step reveal">
-        <div class="step-icon">📄</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/></svg>
+        </div>
         <div class="step-num">01</div>
-        <div class="step-title">Upload Blueprint</div>
-        <div class="step-desc">Drop a PDF blueprint or project spec. Any format, up to 50MB.</div>
+        <div class="step-title">Upload blueprint</div>
+        <div class="step-desc">Drop a PDF blueprint or scope document. Up to 50MB per file.</div>
         <span class="step-time">&lt; 30 sec</span>
       </div>
       <div class="workflow-step reveal" style="transition-delay:0.1s">
-        <div class="step-icon">🔍</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        </div>
         <div class="step-num">02</div>
-        <div class="step-title">AI Extracts Line Items</div>
-        <div class="step-desc">GPT-4o Vision reads your blueprint and pulls every scope item automatically.</div>
+        <div class="step-title">Line items extracted</div>
+        <div class="step-desc">Vision models read the drawings and produce a structured scope list for review.</div>
         <span class="step-time">&lt; 5 sec</span>
       </div>
       <div class="workflow-step reveal" style="transition-delay:0.2s">
-        <div class="step-icon">✉️</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><polyline points="4 5 12 13 20 5"/></svg>
+        </div>
         <div class="step-num">03</div>
-        <div class="step-title">Bids Sent Automatically</div>
-        <div class="step-desc">Professional bid request emails drafted and sent to your subcontractors.</div>
+        <div class="step-title">Bid requests sent</div>
+        <div class="step-desc">Drafts go out to the subs on each scope. You approve before anything ships.</div>
         <span class="step-time">&lt; 2 min</span>
       </div>
       <div class="workflow-step reveal" style="transition-delay:0.3s">
-        <div class="step-icon">📊</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="20" x2="5" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="19" y1="20" x2="19" y2="14"/></svg>
+        </div>
         <div class="step-num">04</div>
-        <div class="step-title">Responses Tracked</div>
-        <div class="step-desc">Live dashboard shows who's responded, who's late, and auto-sends follow-ups.</div>
+        <div class="step-title">Responses tracked</div>
+        <div class="step-desc">Dashboard shows received, pending, and late bids. Follow-ups go out on schedule.</div>
         <span class="step-time">Automatic</span>
       </div>
       <div class="workflow-step reveal" style="transition-delay:0.4s">
-        <div class="step-icon">📅</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>
+        </div>
         <div class="step-num">05</div>
-        <div class="step-title">Schedule Generated</div>
-        <div class="step-desc">AI builds your project schedule from confirmed bids. Export to Sheets or PDF.</div>
+        <div class="step-title">Schedule built</div>
+        <div class="step-desc">Confirmed bids roll into a project schedule. Export to Sheets, CSV, or PDF.</div>
         <span class="step-time">&lt; 15 sec</span>
       </div>
     </div>
@@ -1254,65 +1190,65 @@
 <section class="section">
   <div style="max-width:1100px; margin:0 auto;">
     <div class="section-label">The problem</div>
-    <h2 class="section-title">8 hours of manual work. Every. Single. Project.</h2>
-    <p class="section-sub">Bid tracking is the hidden time drain destroying contractor margins. We fix that.</p>
+    <h2 class="section-title">Bid tracking eats most of a workweek.</h2>
+    <p class="section-sub">For small and mid-market contractors, the bid cycle is one of the largest unmeasured costs in the business. Most of it doesn't need a human.</p>
 
     <div class="problem-solution" style="margin-top:48px;">
       <div class="ps-card before reveal">
-        <span class="ps-tag before">✕ Before BuildFlow</span>
-        <h3>The way it's done today</h3>
+        <span class="ps-tag before">Today</span>
+        <h3>How most teams handle it</h3>
         <div class="ps-item">
-          <div class="ps-icon">✕</div>
-          <p><strong>Read blueprints by hand</strong> to pull out line items. Takes 2–3 hours per project.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></div>
+          <p><strong>Read blueprints by hand</strong> to pull out line items. Two to three hours per project.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✕</div>
-          <p><strong>Email 10–20 subcontractors individually.</strong> Copy-paste, customize, repeat.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></div>
+          <p><strong>Email subs one at a time.</strong> Copy, paste, customize, send. Repeat ten to twenty times.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✕</div>
-          <p><strong>Chase responses in spreadsheets.</strong> Who replied? Who's late? Nobody knows.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></div>
+          <p><strong>Chase responses in spreadsheets</strong> that go out of date the moment they're updated.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✕</div>
-          <p><strong>Miss 10–25% of bid deadlines</strong> because tracking falls through the cracks.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></div>
+          <p><strong>Lose bids to follow-up gaps</strong> — not because the work was wrong, but because nobody flagged the deadline in time.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✕</div>
-          <p><strong>Build schedules manually</strong> in Excel after all bids finally come in.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="2" y1="2" x2="8" y2="8"/><line x1="8" y1="2" x2="2" y2="8"/></svg></div>
+          <p><strong>Build the schedule in Excel</strong> once the bids finally land — usually under deadline pressure.</p>
         </div>
         <div class="ps-big-number">
           <span class="n">8–10h</span>
-          <span class="l">wasted per week, per project manager</span>
+          <span class="l">per project manager, per week</span>
         </div>
       </div>
 
       <div class="ps-card after reveal">
-        <span class="ps-tag after">✓ After BuildFlow</span>
-        <h3>How it works with AI</h3>
+        <span class="ps-tag after">With BuildFlow</span>
+        <h3>What changes</h3>
         <div class="ps-item">
-          <div class="ps-icon">✓</div>
-          <p><strong>Upload the PDF.</strong> AI extracts every line item in under 5 seconds with 90%+ accuracy.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></div>
+          <p><strong>Upload the PDF.</strong> Line items are extracted in seconds. You review the list before anything goes out.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✓</div>
-          <p><strong>Review and send with one click.</strong> Professional bid emails drafted and delivered automatically.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></div>
+          <p><strong>Bid requests draft themselves.</strong> Sent in one batch after you confirm. Tone and scope tailored per sub.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✓</div>
-          <p><strong>Live dashboard tracks everything.</strong> Status updates in real-time, follow-ups sent automatically.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></div>
+          <p><strong>One dashboard for the whole cycle.</strong> Received, pending, and late, updated as responses come in.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✓</div>
-          <p><strong>Zero missed deadlines.</strong> Automated alerts at 48hrs, 24hrs, and the moment a bid goes late.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></div>
+          <p><strong>Deadline reminders that fire on their own</strong> — 48 hours out, 24 hours out, and when a bid is past due.</p>
         </div>
         <div class="ps-item">
-          <div class="ps-icon">✓</div>
-          <p><strong>Schedule generated automatically</strong> from confirmed bids. Export in seconds.</p>
+          <div class="ps-icon"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></div>
+          <p><strong>Schedule generated from confirmed bids,</strong> ready to export to Sheets, CSV, or PDF.</p>
         </div>
         <div class="ps-big-number">
           <span class="n">~1h</span>
-          <span class="l">per week. That's it.</span>
+          <span class="l">to review, approve, and send</span>
         </div>
       </div>
     </div>
@@ -1323,45 +1259,57 @@
 <section class="section" id="features">
   <div style="max-width:1100px; margin:0 auto;">
     <div class="section-label">Features</div>
-    <h2 class="section-title">Everything the bid process needs.</h2>
-    <p class="section-sub">Built specifically for small to mid-market contractors. No bloat. No enterprise pricing.</p>
+    <h2 class="section-title">Built for the bid cycle, not retrofitted from elsewhere.</h2>
+    <p class="section-sub">Six modules that cover the work between blueprint and groundbreaking. Designed for shops running 5 to 50 projects a year.</p>
 
     <div class="features-grid">
       <div class="feat-card reveal">
-        <div class="feat-icon-wrap">📄</div>
-        <h4>Blueprint Parser</h4>
-        <p>GPT-4o Vision reads any PDF blueprint and extracts a structured list of scope items — drywall, electrical, plumbing, and more — in seconds.</p>
-        <div class="feat-save">⚡ Saves 2–3 hrs/project</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><polyline points="14 3 14 8 19 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+        </div>
+        <h4>Blueprint parser</h4>
+        <p>Reads PDF blueprints and scope documents, then returns a structured list of line items — partitions, MEP, finishes — for review before anything is sent.</p>
+        <div class="feat-save">Replaces 2–3 hrs per project</div>
       </div>
       <div class="feat-card reveal" style="transition-delay:0.1s">
-        <div class="feat-icon-wrap">✉️</div>
-        <h4>Bid Email Generator</h4>
-        <p>AI drafts professional bid request emails for each subcontractor scope. You review, customize, and send — all from one dashboard.</p>
-        <div class="feat-save">⚡ Saves 1–2 hrs/project</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><polyline points="4 5 12 13 20 5"/></svg>
+        </div>
+        <h4>Bid request drafting</h4>
+        <p>Drafts each request against the right scope, with the project details a sub actually needs. You edit and approve from one screen, then send the batch.</p>
+        <div class="feat-save">Replaces 1–2 hrs per project</div>
       </div>
       <div class="feat-card reveal" style="transition-delay:0.2s">
-        <div class="feat-icon-wrap">📊</div>
-        <h4>Live Bid Tracker</h4>
-        <p>Real-time dashboard shows every bid's status — received, pending, or overdue. Automated follow-up emails sent without lifting a finger.</p>
-        <div class="feat-save">⚡ Saves 2–3 hrs/week</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="9" x2="9" y2="20"/></svg>
+        </div>
+        <h4>Bid tracker</h4>
+        <p>One dashboard for every open bid: received, pending, and overdue. Follow-up emails go out on the cadence you set, without anyone remembering to send them.</p>
+        <div class="feat-save">Replaces 2–3 hrs per week</div>
       </div>
       <div class="feat-card reveal">
-        <div class="feat-icon-wrap">🔔</div>
-        <h4>Deadline Alerts</h4>
-        <p>Never miss a bid deadline again. Automated alerts at 48 hours, 24 hours, and the moment a response goes late — via email and dashboard.</p>
-        <div class="feat-save">⚡ Eliminates missed bids</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </div>
+        <h4>Deadline reminders</h4>
+        <p>Automated alerts at 48 hours, 24 hours, and post-deadline — to the sub and to the PM. Routed by email and surfaced in the dashboard.</p>
+        <div class="feat-save">Reduces missed-deadline rate</div>
       </div>
       <div class="feat-card reveal" style="transition-delay:0.1s">
-        <div class="feat-icon-wrap">📅</div>
-        <h4>Schedule Generator</h4>
-        <p>Once bids are confirmed, AI maps scope items into a project schedule with phases, dependencies, and timelines. Export to Sheets, CSV, or PDF.</p>
-        <div class="feat-save">⚡ Saves 3–5 hrs/project</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/></svg>
+        </div>
+        <h4>Schedule generation</h4>
+        <p>Once bids are confirmed, the tool maps scopes onto a phased schedule with dependencies and target dates. Export to Google Sheets, CSV, or PDF.</p>
+        <div class="feat-save">Replaces 3–5 hrs per project</div>
       </div>
       <div class="feat-card reveal" style="transition-delay:0.2s">
-        <div class="feat-icon-wrap">🤖</div>
-        <h4>Email Triage Assistant</h4>
-        <p>n8n workflow monitors your inbox, auto-routes bid responses to the tracker, drafts replies to subcontractor questions, and flags urgent client messages.</p>
-        <div class="feat-save">⚡ Saves 1 hr/day</div>
+        <div class="feat-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4>Inbox routing</h4>
+        <p>Connects to your existing inbox, files incoming bid responses against the right project, and surfaces messages that need a human reply.</p>
+        <div class="feat-save">Replaces ~1 hr per day</div>
       </div>
     </div>
   </div>
@@ -1370,9 +1318,9 @@
 <!-- ROI CALCULATOR -->
 <section class="section" id="roi">
   <div style="max-width:1100px; margin:0 auto; text-align:center;">
-    <div class="section-label">ROI Calculator</div>
-    <h2 class="section-title" style="max-width:100%; margin:0 auto;">See your numbers.</h2>
-    <p class="section-sub" style="margin:16px auto 48px;">Move the sliders to match your operation. See exactly what BuildFlow AI saves you.</p>
+    <div class="section-label">ROI calculator</div>
+    <h2 class="section-title" style="max-width:100%; margin:0 auto;">Estimate the payback for your shop.</h2>
+    <p class="section-sub" style="margin:16px auto 48px;">Set the sliders to match how your team operates today. Numbers assume the Monthly Unlimited plan at $400/month.</p>
 
     <div class="roi-wrap reveal">
       <div class="roi-grid">
@@ -1428,104 +1376,96 @@
 <section class="section" id="pricing">
   <div style="max-width:1100px; margin:0 auto; text-align:center;">
     <div class="section-label">Pricing</div>
-    <h2 class="section-title" style="max-width:100%; margin:0 auto;">Simple. No surprises.</h2>
-    <p class="section-sub" style="margin:16px auto 0;">Start per-project with zero commitment. Switch to monthly when you're ready.</p>
+    <h2 class="section-title" style="max-width:100%; margin:0 auto;">Two plans. No setup fees.</h2>
+    <p class="section-sub" style="margin:16px auto 0;">Start per-project to try it on a live job. Move to the monthly plan once you're running more than four projects a month.</p>
 
     <div class="pricing-wrap">
       <div class="price-card reveal">
         <div class="plan-tag">Starter</div>
-        <div class="plan-name">Per Project</div>
-        <div class="plan-desc">Perfect for getting started. Pay only for what you use. No monthly commitment.</div>
+        <div class="plan-name">Per project</div>
+        <div class="plan-desc">A single project end-to-end. Pay as you go, no monthly commitment.</div>
         <div class="plan-price">
           <span class="amount">$75</span>
           <span class="per">per project</span>
         </div>
-        <div class="plan-roi">Avg. savings: $300–$500 per project</div>
+        <div class="plan-roi">Typically pays back within one project</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span class="check">✓</span> Blueprint parsing & line item extraction</li>
-          <li><span class="check">✓</span> AI-generated bid request emails</li>
-          <li><span class="check">✓</span> Bid tracker & response dashboard</li>
-          <li><span class="check">✓</span> Automated deadline alerts</li>
-          <li><span class="check">✓</span> Project schedule export (CSV, PDF)</li>
-          <li><span class="check">✓</span> 7-day free trial, no credit card</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Blueprint parsing and line item review</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Drafted bid request emails</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Bid response dashboard</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Automated deadline reminders</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Schedule export to CSV and PDF</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> 7-day trial, no card required</li>
         </ul>
-        <a href="#waitlist" class="btn-secondary" style="width:100%; justify-content:center;">Get Started Free</a>
+        <a href="#waitlist" class="btn-secondary" style="width:100%; justify-content:center;">Get started</a>
       </div>
 
       <div class="price-card featured reveal" style="transition-delay:0.1s">
-        <div class="plan-tag">Most Popular</div>
+        <div class="plan-tag">Recommended</div>
         <div class="plan-name">Monthly Unlimited</div>
-        <div class="plan-desc">Run as many projects as you need. One flat rate, every month.</div>
+        <div class="plan-desc">Unlimited projects on a flat monthly rate. The right plan for active shops.</div>
         <div class="plan-price">
           <span class="amount">$400</span>
           <span class="per">/month</span>
         </div>
-        <div class="plan-roi">Avg. savings: $1,600–$2,500 per month</div>
+        <div class="plan-roi">Typical payback in the first week</div>
         <div class="plan-divider"></div>
         <ul class="plan-features">
-          <li><span class="check">✓</span> Everything in Starter, unlimited projects</li>
-          <li><span class="check">✓</span> Priority processing (&lt;3 sec blueprints)</li>
-          <li><span class="check">✓</span> Email triage assistant (inbox automation)</li>
-          <li><span class="check">✓</span> Google Sheets + Calendar integration</li>
-          <li><span class="check">✓</span> SMS deadline alerts</li>
-          <li><span class="check">✓</span> Dedicated onboarding call</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Everything in Starter, unlimited projects</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Priority processing</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Inbox routing for bid responses</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Google Sheets and Calendar sync</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> SMS deadline reminders</li>
+          <li><span class="check"><svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="2 5.5 4 7.5 8 3"/></svg></span> Onboarding call with the team</li>
         </ul>
-        <a href="#waitlist" class="btn-primary" style="width:100%; justify-content:center;">Join Waitlist</a>
+        <a href="#waitlist" class="btn-primary" style="width:100%; justify-content:center;">Join waitlist</a>
       </div>
     </div>
 
-    <p style="margin-top:28px; font-size:0.82rem; color:var(--gray-500);">Annual plan available — 2 months free (pay $4,000/year). Enterprise pricing for 50+ employee firms available on request.</p>
+    <p style="margin-top:28px; font-size:0.82rem; color:var(--gray-500);">Annual billing available at $4,000/year (two months free). Custom pricing for firms over 50 employees on request.</p>
   </div>
 </section>
 
-<!-- DESIGN PARTNERS -->
+<!-- WHO IT'S FOR -->
 <section class="section">
-  <div style="max-width:900px; margin:0 auto; text-align:center;">
-    <div class="section-label">Now Accepting</div>
-    <h2 class="section-title" style="max-width:100%; margin:0 auto;">Be one of our first design partners.</h2>
-    <p class="section-sub" style="margin:16px auto 32px;">We're working directly with a small group of contractors to build the exact tool the industry needs. Design partners get in free, shape the product, and lock in founder pricing before we launch publicly.</p>
+  <div style="max-width:1100px; margin:0 auto; text-align:center;">
+    <div class="section-label">Who it's for</div>
+    <h2 class="section-title" style="max-width:100%; margin:0 auto;">Built around three working patterns.</h2>
+    <p class="section-sub" style="margin:16px auto 0;">If any of these sound like your shop, BuildFlow is designed for the way you already work.</p>
 
-    <div class="testimonials" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
-      <div class="testi-card reveal" style="text-align:left;">
-        <div style="width:40px;height:40px;background:var(--amber-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <div class="testi-name" style="margin-bottom:8px;">Free beta access</div>
-        <p class="testi-role" style="font-size:0.9rem;line-height:1.6;color:var(--gray-300);">Use the full BuildFlow AI platform at no cost during the beta period. No credit card, no commitment.</p>
+    <div class="testimonials">
+      <div class="testi-card reveal">
+        <h4 style="font-family:'Syne',sans-serif; font-weight:600; font-size:1rem; color:var(--white); margin-bottom:14px; letter-spacing:-0.015em;">The owner-operator</h4>
+        <p class="testi-quote" style="font-style:normal;">Running the business, the bids, and the schedule from one inbox. The hours lost to chasing subcontractors are hours not spent on the next sale.</p>
+        <p style="font-size:0.78rem; color:var(--gray-500); margin-top:18px;">Typical fit: 5–15 employees, 2–6 active projects</p>
       </div>
 
-      <div class="testi-card reveal" style="text-align:left;transition-delay:0.1s">
-        <div style="width:40px;height:40px;background:rgba(34,197,94,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <div class="testi-name" style="margin-bottom:8px;">Direct influence on the product</div>
-        <p class="testi-role" style="font-size:0.9rem;line-height:1.6;color:var(--gray-300);">Your workflow becomes our roadmap. Tell us what's broken, what's missing, and what would actually save you time.</p>
+      <div class="testi-card reveal" style="transition-delay:0.1s">
+        <h4 style="font-family:'Syne',sans-serif; font-weight:600; font-size:1rem; color:var(--white); margin-bottom:14px; letter-spacing:-0.015em;">The growing GC</h4>
+        <p class="testi-quote" style="font-style:normal;">Two or three PMs juggling overlapping bid cycles. Spreadsheets work until they don't — usually right before a deadline.</p>
+        <p style="font-size:0.78rem; color:var(--gray-500); margin-top:18px;">Typical fit: 15–40 employees, 6–15 active projects</p>
       </div>
 
-      <div class="testi-card reveal" style="text-align:left;transition-delay:0.2s">
-        <div style="width:40px;height:40px;background:rgba(185,129,255,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b981ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <div class="testi-name" style="margin-bottom:8px;">Locked-in founder pricing</div>
-        <p class="testi-role" style="font-size:0.9rem;line-height:1.6;color:var(--gray-300);">Design partners keep their early pricing forever. When we raise rates for new customers, yours never changes.</p>
+      <div class="testi-card reveal" style="transition-delay:0.2s">
+        <h4 style="font-family:'Syne',sans-serif; font-weight:600; font-size:1rem; color:var(--white); margin-bottom:14px; letter-spacing:-0.015em;">The specialty contractor</h4>
+        <p class="testi-quote" style="font-style:normal;">Bidding into many GCs across electrical, mechanical, or finish work. Speed of response is often the deciding factor on award.</p>
+        <p style="font-size:0.78rem; color:var(--gray-500); margin-top:18px;">Typical fit: 10–30 employees, high bid volume</p>
       </div>
     </div>
-
-    <p style="margin-top:16px;font-size:0.85rem;color:var(--gray-500);">We're accepting a limited number of design partners. Spots are filled on a first-come basis.</p>
   </div>
 </section>
 
 <!-- CTA / WAITLIST -->
 <section class="cta-section" id="waitlist">
   <div class="cta-box reveal">
-    <h2>Ready to stop tracking bids by hand?</h2>
-    <p>Join the BuildFlow AI waitlist. Design partners get free access during beta and direct input on the product roadmap.</p>
+    <h2>Get on the beta list.</h2>
+    <p>We're onboarding a small group of design partners through the end of 2026. Partners get free access during the beta and a direct line into product decisions.</p>
     <div class="email-capture">
       <input type="email" id="email-input" placeholder="your@email.com" />
-      <button onclick="handleWaitlist()">Join Waitlist</button>
+      <button onclick="handleWaitlist()">Request access</button>
     </div>
-    <p class="cta-note" id="waitlist-note">7-day free trial · No credit card · Cancel anytime</p>
+    <p class="cta-note" id="waitlist-note">No card required. We'll follow up within two business days.</p>
   </div>
 </section>
 
@@ -1586,505 +1526,22 @@
   });
   calcROI();
 
-  // Waitlist — submits to Beehiiv API
-  async function handleWaitlist() {
-    const emailInput = document.getElementById('email-input');
-    const note = document.getElementById('waitlist-note');
-    const email = emailInput.value.trim();
-
+  // Waitlist
+  function handleWaitlist() {
+    const email = document.getElementById('email-input').value.trim();
     if (!email || !email.includes('@')) {
-      note.textContent = 'Please enter a valid email address.';
-      note.style.color = '#FF6B6B';
+      document.getElementById('waitlist-note').textContent = 'Please enter a valid email address.';
+      document.getElementById('waitlist-note').style.color = '#FF6B6B';
       return;
     }
-
-    note.textContent = 'Submitting...';
-    note.style.color = '#B8B4AC';
-
-    try {
-     const res = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email })
-        });
-
-      const data = await res.json();
-
-      if (res.ok || res.status === 201) {
-        note.textContent = "You're on the list! We'll be in touch soon.";
-        note.style.color = '#22C55E';
-        emailInput.value = '';
-      } else {
-        throw new Error(data.message || 'Server error');
-      }
-    } catch (err) {
-      note.textContent = "Something went wrong. Email us at hello@msystemsai.com";
-      note.style.color = '#FF6B6B';
-    }
+    document.getElementById('waitlist-note').textContent = "You're on the list! We'll be in touch soon.";
+    document.getElementById('waitlist-note').style.color = '#22C55E';
+    document.getElementById('email-input').value = '';
   }
 
   document.getElementById('email-input').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') handleWaitlist();
   });
-</script>
-
-<!-- ── FLOATING CHATBOT WIDGET ── -->
-<style>
-.bf-trigger{
-  position:fixed;bottom:28px;right:28px;
-  width:60px;height:60px;
-  background:#F4A228;border-radius:50%;border:none;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  box-shadow:0 8px 30px rgba(244,162,40,0.45);
-  transition:transform 0.2s,box-shadow 0.2s;
-  z-index:9999;
-}
-.bf-trigger:hover{transform:scale(1.08);box-shadow:0 12px 40px rgba(244,162,40,0.55);}
-.bf-trigger svg{width:26px;height:26px;color:#0D1B2A;}
-.bf-notif{
-  position:absolute;top:-4px;right:-4px;
-  width:20px;height:20px;background:#EF4444;
-  border-radius:50%;border:2px solid #0D1B2A;
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.6rem;font-weight:700;color:white;
-}
-.bf-window{
-  position:fixed;bottom:104px;right:28px;
-  width:380px;height:580px;
-  background:#1A2E42;
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:24px;overflow:hidden;
-  display:flex;flex-direction:column;
-  box-shadow:0 32px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(244,162,40,0.08);
-  z-index:9998;
-  transform:scale(0.92) translateY(16px);
-  opacity:0;pointer-events:none;
-  transition:transform 0.25s cubic-bezier(0.34,1.56,0.64,1),opacity 0.2s ease;
-}
-.bf-window.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
-.bf-header{
-  background:linear-gradient(135deg,#243B55,#1A2E42);
-  border-bottom:1px solid rgba(255,255,255,0.07);
-  padding:14px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0;
-}
-.bf-avatar{
-  width:38px;height:38px;background:#F4A228;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;
-}
-.bf-avatar svg{width:18px;height:18px;}
-.bf-dot{
-  position:absolute;bottom:-2px;right:-2px;
-  width:11px;height:11px;background:#22C55E;
-  border:2px solid #1A2E42;border-radius:50%;
-  animation:bfpulse 2s ease infinite;
-}
-@keyframes bfpulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,0.4)}50%{box-shadow:0 0 0 4px rgba(34,197,94,0)}}
-.bf-hinfo{flex:1;}
-.bf-hname{font-family:'Syne',sans-serif;font-weight:700;font-size:0.92rem;color:#fff;letter-spacing:-0.01em;}
-.bf-hsub{font-size:0.7rem;color:#22C55E;margin-top:1px;}
-.bf-close{
-  width:30px;height:30px;background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;
-  color:#B8B4AC;transition:background 0.2s,color 0.2s;
-}
-.bf-close:hover{background:rgba(255,255,255,0.1);color:#fff;}
-.bf-close svg{width:14px;height:14px;}
-.bf-messages{
-  flex:1;overflow-y:auto;padding:16px 14px;
-  display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth;
-}
-.bf-messages::-webkit-scrollbar{width:3px;}
-.bf-messages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px;}
-.bf-msg{display:flex;gap:8px;align-items:flex-end;animation:bfmsg 0.3s ease both;}
-@keyframes bfmsg{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.bf-msg.user{flex-direction:row-reverse;}
-.bf-mavatar{
-  width:26px;height:26px;border-radius:7px;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.6rem;font-weight:700;font-family:'Syne',sans-serif;
-}
-.bf-mavatar.bot{background:#F4A228;color:#0D1B2A;}
-.bf-mavatar.user{background:rgba(255,255,255,0.1);color:#B8B4AC;}
-.bf-bubble{
-  max-width:calc(100% - 70px);padding:10px 13px;border-radius:14px;
-  font-size:0.84rem;line-height:1.6;
-}
-.bf-msg.bot .bf-bubble{background:#243B55;border:1px solid rgba(255,255,255,0.07);color:#EAE7E1;border-bottom-left-radius:3px;}
-.bf-msg.user .bf-bubble{background:#F4A228;color:#0D1B2A;font-weight:500;border-bottom-right-radius:3px;}
-.bf-bubble p{margin:0 0 6px;}.bf-bubble p:last-child{margin:0;}
-.bf-bubble strong{color:#fff;}.bf-msg.user .bf-bubble strong{color:#0D1B2A;}
-.bf-bubble ul{margin:4px 0 4px 14px;}.bf-bubble li{margin-bottom:3px;}
-.bf-bubble a{color:#F4A228;text-decoration:underline;}
-.bf-time{font-size:0.6rem;color:#6E6A63;margin-top:3px;padding:0 3px;}
-.bf-msg.user .bf-time{text-align:right;}
-.bf-typing{display:flex;gap:8px;align-items:flex-end;}
-.bf-tdots{
-  background:#243B55;border:1px solid rgba(255,255,255,0.07);
-  border-radius:14px;border-bottom-left-radius:3px;
-  padding:12px 16px;display:flex;gap:4px;align-items:center;
-}
-.bf-tdots span{width:5px;height:5px;background:#6E6A63;border-radius:50%;animation:bfbounce 1.2s ease infinite;}
-.bf-tdots span:nth-child(2){animation-delay:0.2s;}
-.bf-tdots span:nth-child(3){animation-delay:0.4s;}
-@keyframes bfbounce{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
-.bf-qr{padding:0 14px 10px;display:flex;flex-wrap:wrap;gap:6px;flex-shrink:0;}
-.bf-qrbtn{
-  background:transparent;border:1px solid rgba(244,162,40,0.3);
-  color:#F4A228;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:500;
-  padding:5px 11px;border-radius:100px;cursor:pointer;
-  transition:background 0.2s,border-color 0.2s;white-space:nowrap;
-}
-.bf-qrbtn:hover{background:rgba(244,162,40,0.1);border-color:#F4A228;}
-.bf-input-area{
-  border-top:1px solid rgba(255,255,255,0.06);
-  padding:10px 14px;display:flex;gap:8px;align-items:flex-end;
-  flex-shrink:0;background:rgba(0,0,0,0.15);
-}
-.bf-input-wrap{
-  flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);
-  border-radius:11px;display:flex;align-items:flex-end;padding:9px 12px;
-  transition:border-color 0.2s;min-height:42px;
-}
-.bf-input-wrap:focus-within{border-color:rgba(244,162,40,0.4);}
-#bf-input{
-  flex:1;background:transparent;border:none;outline:none;
-  color:#fff;font-family:'DM Sans',sans-serif;font-size:0.84rem;
-  resize:none;max-height:100px;line-height:1.5;overflow-y:auto;
-}
-#bf-input::placeholder{color:#6E6A63;}
-.bf-send{
-  width:42px;height:42px;background:#F4A228;border:none;border-radius:11px;
-  cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  transition:background 0.2s,transform 0.1s;
-}
-.bf-send:hover{background:#FBBF58;transform:translateY(-1px);}
-.bf-send:disabled{background:rgba(255,255,255,0.1);cursor:not-allowed;transform:none;}
-.bf-send svg{width:17px;height:17px;color:#0D1B2A;}
-.bf-footer{text-align:center;padding:6px 14px 8px;font-size:0.62rem;color:#6E6A63;border-top:1px solid rgba(255,255,255,0.04);flex-shrink:0;}
-@media(max-width:440px){
-  .bf-window{width:calc(100vw - 24px);right:12px;bottom:96px;}
-  .bf-trigger{right:16px;bottom:16px;}
-}
-</style>
-
-<!-- Trigger button -->
-<button class="bf-trigger" id="bf-trigger" onclick="bfToggle()" aria-label="Open chat">
-  <div class="bf-notif">1</div>
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-  </svg>
-</button>
-
-<!-- Chat window -->
-<div class="bf-window" id="bf-window">
-  <div class="bf-header">
-    <div class="bf-avatar">
-      <svg viewBox="0 0 20 20" fill="none"><rect x="1" y="9" width="7" height="10" rx="1.5" fill="#0D1B2A"/><rect x="12" y="4" width="7" height="15" rx="1.5" fill="#0D1B2A"/><rect x="1" y="1" width="7" height="6" rx="1.5" fill="#0D1B2A" opacity="0.4"/></svg>
-      <div class="bf-dot"></div>
-    </div>
-    <div class="bf-hinfo">
-      <div class="bf-hname">BuildFlow AI Assistant</div>
-      <div class="bf-hsub">● Online — replies instantly</div>
-    </div>
-    <button class="bf-close" onclick="bfToggle()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-    </button>
-  </div>
-
-  <div class="bf-messages" id="bf-messages"></div>
-
-  <div class="bf-qr" id="bf-qr">
-    <button class="bf-qrbtn" onclick="bfQuick('How does BuildFlow work?')">How does it work?</button>
-    <button class="bf-qrbtn" onclick="bfQuick('What does it cost?')">Pricing</button>
-    <button class="bf-qrbtn" onclick="bfQuick('How much time will I actually save?')">Time savings</button>
-    <button class="bf-qrbtn" onclick="bfQuick('I want to try it free')">Free trial</button>
-    <button class="bf-qrbtn" onclick="bfQuick('Is it hard to set up?')">Setup</button>
-  </div>
-
-  <div class="bf-input-area">
-    <div class="bf-input-wrap">
-      <textarea id="bf-input" placeholder="Ask anything about BuildFlow AI…" rows="1"></textarea>
-    </div>
-    <button class="bf-send" id="bf-send" onclick="bfSend()">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-    </button>
-  </div>
-  <div class="bf-footer">Powered by BuildFlow AI · Your info is never shared</div>
-</div>
-
-<script>
-// ── CHATBOT ──────────────────────────────────────────────────────────────────
-const BF_SYSTEM = `You are the BuildFlow AI sales and support assistant, embedded on the BuildFlow AI landing page. Your job is to answer every question a visiting contractor might have — and to help them understand the product, handle their objections, and get them to sign up for a free trial.
-
-You are warm, direct, and knowledgeable. You talk like a real person, not a corporate chatbot. You are never pushy but always helpful. You use short paragraphs and bullet points when needed. You keep answers concise — 2-4 sentences for simple questions, a bit longer for complex ones. Never write walls of text.
-
----
-
-ABOUT BUILDFLOW AI:
-
-Company: BuildFlow AI, a product of M Systems AI (Lawrence, KS)
-Founder: College student at University of Kansas, building this while in school
-Stage: Pre-revenue beta — actively signing design partners
-
-WHAT IT IS:
-BuildFlow AI is a web-based platform that automates the entire bid-to-schedule workflow for small to mid-market construction contractors. Instead of spending 5–10 hours per week manually reading blueprints, writing bid emails, chasing subcontractors, and building schedules in Excel, contractors upload a blueprint and BuildFlow handles everything.
-
-THE 5-STEP WORKFLOW:
-1. Contractor uploads a blueprint PDF or project spec
-2. AI (GPT-4o Vision) extracts all line items automatically (drywall, electrical, plumbing, etc.) in under 5 seconds
-3. AI drafts professional bid request emails for each subcontractor trade
-4. System tracks bid responses in real-time — shows who responded, who's pending, who's late — and sends automated follow-up reminders
-5. AI generates a project schedule from confirmed bids and exports it to Google Sheets, CSV, or PDF
-
-FEATURES:
-- Blueprint Parser: GPT-4o Vision reads any PDF blueprint, 90%+ accuracy, under 5 second processing
-- Bid Email Generator: Claude AI drafts professional bid request emails for each sub trade
-- Live Bid Tracker: Dashboard showing every bid's status across all projects in real-time
-- Deadline Alert System: Automated alerts at 48 hours, 24 hours, and when a bid goes late
-- Project Schedule Generator: AI builds Gantt chart / schedule from confirmed bids, exports in seconds
-- Email Triage Assistant: monitors inbox, routes bid responses automatically, drafts replies to sub questions
-
-TECH STACK: React + TailwindCSS frontend, FastAPI backend, GPT-4o Vision (blueprint parsing), Claude Sonnet (email generation + schedule logic), SendGrid (email delivery), AWS S3 (file storage), n8n (workflow automation)
-
-PRICING (official, source of truth):
-- Phase 1 — Per Project: $75 per project. No monthly commitment. Pay per project processed.
-- Phase 2 — Monthly Unlimited: $400/month. Unlimited projects. All features included.
-- Annual discount: $3,840/year (2 months free vs. monthly)
-- Free trial: 7 days, no credit card required
-- Enterprise: Custom pricing for firms with 50+ employees
-- Hybrid plan: $200/month base + $25/project (capped at 20 projects) for high-volume users
-
-ROI / VALUE:
-- Average contractor saves 8–10 hours per week per project manager
-- At $50/hour loaded labor cost: saves $1,600–$2,000/month per PM
-- BuildFlow costs $400/month
-- Net savings: $1,200–$1,600/month = 3x–5x ROI
-- Annual ROI for small contractor: $12,000–$18,000 saved vs. $4,800 spent
-
-TARGET CUSTOMERS:
-- Small to mid-market general contractors (5–50 employees)
-- Specialty subs: electrical, plumbing, HVAC, framing, drywall, roofing, concrete, insulation
-- Annual revenue: $2M–$50M
-- Pain: manual bid tracking via email and spreadsheets, missed deadlines, no centralized system
-
-COMPETITIVE ADVANTAGE vs. others:
-- Togal.AI: focuses on AI takeoffs/measurements. BuildFlow focuses on scheduling, not just measurements.
-- Downtobid: bid invitation and sub management at ~$150/mo. BuildFlow automates schedule creation FROM the bid.
-- Buildr: CRM and precon management, custom/enterprise pricing. BuildFlow is more accessible at $75/project.
-- STACK: cloud estimating. BuildFlow is specifically the "bid-to-schedule" AI engine — a gap none of them fill.
-- Procore: large enterprise tool. BuildFlow is designed for the small contractor Procore is too expensive for.
-
-CURRENT STATUS:
-- Pre-revenue beta, actively enrolling design partners
-- Design partners get: free access during beta + direct influence on product roadmap + locked-in founder pricing forever
-- No credit card required for trial
-- Founder is personally doing onboarding calls for all early users
-- Limited design partner spots — filled on a first-come basis
-
-COMMON QUESTIONS & HOW TO ANSWER THEM:
-
-Q: How does BuildFlow work?
-A: Explain the 5-step workflow above clearly and concisely. Emphasize speed (5 seconds to parse a blueprint) and the time savings.
-
-Q: What does it cost / pricing?
-A: $75 per project to start, or $400/month for unlimited. Always mention the 7-day free trial. Emphasize the ROI.
-
-Q: Is there a free trial?
-A: Yes — 7 days free, no credit card required. They can try it on a real project.
-
-Q: How accurate is the blueprint parsing?
-A: 90%+ accuracy on standard blueprint formats using GPT-4o Vision. For the first 10 projects with a new customer, there's a human review step built in. Contractors can also edit any extracted items before proceeding.
-
-Q: What kinds of blueprints can it read?
-A: Any standard PDF blueprint or project specification, up to 50MB. Works on residential, commercial, and specialty trade blueprints.
-
-Q: Is it hard to set up?
-A: No. Upload a blueprint and the system handles the rest. No IT setup, no integrations required to start. Onboarding call included for all trial users.
-
-Q: What if my subcontractors don't respond to the automated emails?
-A: BuildFlow sends automated follow-up reminders at 48 hours and 24 hours before the deadline. If they still don't respond, you get an alert. The system makes it easy to re-send or manually mark a bid as received.
-
-Q: Does it integrate with Procore / QuickBooks / other tools?
-A: Google Sheets integration is live. QuickBooks, HubSpot, and other integrations are on the Phase 2 roadmap (months 4–6). The schedule output exports to CSV and PDF today.
-
-Q: How is this different from just using email?
-A: Email doesn't track anything automatically. With BuildFlow, every bid request is logged, every response is tracked, every deadline is monitored — without you checking your inbox constantly.
-
-Q: Is my data secure / private?
-A: Blueprint data is stored securely on AWS S3 with encryption. It is never shared with third parties or used to train AI models. Each contractor's data is completely isolated.
-
-Q: What size contractor is this for?
-A: Best fit is 5–50 employees. Owner-operators save the most time because they're currently doing everything manually. Multi-PM operations benefit from centralized visibility across all projects.
-
-Q: I'm skeptical — how do I know it will actually work?
-A: That's fair. The best answer is to try it on one real project — 7 days free, no credit card. If it doesn't save you time, you don't pay anything. The founder is also doing personal onboarding calls for all early users.
-
-Q: Can I cancel anytime?
-A: Yes. No contracts, no cancellation fees. Monthly plan can be cancelled any time.
-
-Q: How do I sign up / get started?
-A: Tell them to enter their email in the waitlist form on the page, or email hello@msystemsai.com. The founder will reach out personally to set up an onboarding call.
-
-Q: Who built this?
-A: BuildFlow AI was built by a University of Kansas student building an AI startup while in college. The founder is doing all early sales and onboarding personally.
-
-Q: Is this just for general contractors or also for specialty subs?
-A: Both. GCs use it to send and track outgoing bid requests to their subs. Specialty subs (electrical, plumbing, framing, roofing, etc.) use it to track incoming bid requests from GCs and never miss a deadline.
-
-Q: What is a design partner?
-A: A design partner is an early contractor who gets free beta access in exchange for giving feedback on the product. You shape the roadmap, lock in founder pricing forever, and get white-glove onboarding. Spots are limited.
-
-Q: What happens after the free trial?
-A: After 7 days you can choose $75/project or $400/month. If you loved it, you stay. If not, you walk away — no charge, no hard feelings.
-
-Q: Do I need to install anything?
-A: No. BuildFlow is 100% web-based. Works in any browser. No downloads, no IT involvement needed.
-
-Q: How long does it take to process a blueprint?
-A: Under 5 seconds for most blueprints. Even large 40–50 page sets are processed in under 30 seconds.
-
-Q: What if the AI makes a mistake on the blueprint?
-A: Every extraction goes through a contractor review step before anything is sent. You see every line item, can edit or remove anything, and only proceed when you're happy with it.
-
-Q: Can I use it for multiple projects at once?
-A: Yes. The dashboard shows all active projects and their bid status in one view. You can run as many projects simultaneously as you need.
-
-Q: What happens to my blueprint data?
-A: Blueprints are stored on AWS S3 with encryption. They are never shared with anyone, never used to train AI, and you can delete them anytime.
-
-TONE GUIDELINES:
-- Be conversational, not corporate
-- Use "you" not "our users"
-- Short sentences. Real talk.
-- If someone expresses frustration or skepticism, acknowledge it genuinely before answering
-- If someone asks to sign up or get started, give them the clear next step: enter email on the page or email hello@msystemsai.com
-- If someone asks something you don't know, say so honestly and offer to connect them with the founder
-- Never make up features or pricing that aren't in this document
-- If asked about things outside BuildFlow (competitor features, unrelated tech), answer briefly and redirect back to how BuildFlow handles it
-- If someone says they're a contractor with a specific trade or company size, tailor your answer to their situation
-
-Always end responses with a relevant follow-up question or a nudge toward the free trial when appropriate — but don't be annoying about it.`;
-
-let bfHistory = [];
-let bfTyping = false;
-let bfOpen = false;
-let bfInited = false;
-
-function bfToggle() {
-  bfOpen = !bfOpen;
-  document.getElementById('bf-window').classList.toggle('open', bfOpen);
-  if (bfOpen) {
-    document.querySelector('.bf-notif').style.display = 'none';
-    if (!bfInited) {
-      bfInited = true;
-      setTimeout(() => bfAddBot("Hey! 👋 I'm the BuildFlow AI assistant. Ask me anything about how the product works, pricing, or getting started.\n\nWhat's on your mind?"), 300);
-    }
-    setTimeout(() => document.getElementById('bf-input').focus(), 350);
-  }
-}
-
-function bfQuick(text) {
-  document.getElementById('bf-input').value = text;
-  bfSend();
-}
-
-async function bfSend() {
-  const input = document.getElementById('bf-input');
-  const text = input.value.trim();
-  if (!text || bfTyping) return;
-  input.value = '';
-  input.style.height = 'auto';
-  const qr = document.getElementById('bf-qr');
-  if (qr) qr.style.display = 'none';
-  bfAddUser(text);
-  bfHistory.push({ role: 'user', content: text });
-  bfShowTyping();
-  document.getElementById('bf-send').disabled = true;
-  try {
-    const res = await fetch('/api/chat', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        system: BF_SYSTEM,
-        messages: bfHistory
-      })
-    });
-    const data = await res.json();
-    bfHideTyping();
-    if (data.content && data.content[0] && data.content[0].text) {
-      const reply = data.content[0].text;
-      bfHistory.push({ role: 'assistant', content: reply });
-      bfAddBot(reply);
-    } else {
-      bfAddBot("Having a quick hiccup! Email us directly at **hello@msystemsai.com** and we'll get right back to you.");
-    }
-  } catch(e) {
-    bfHideTyping();
-    bfAddBot("Looks like a connection issue. You can reach us at **hello@msystemsai.com** — or drop your email in the form above!");
-  }
-  document.getElementById('bf-send').disabled = false;
-  document.getElementById('bf-input').focus();
-}
-
-function bfAddBot(text) {
-  const msgs = document.getElementById('bf-messages');
-  const g = document.createElement('div');
-  g.className = 'bf-msg bot';
-  g.innerHTML = `<div class="bf-mavatar bot">BF</div><div><div class="bf-bubble">${bfMd(text)}</div><div class="bf-time">${bfTime()}</div></div>`;
-  msgs.appendChild(g);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function bfAddUser(text) {
-  const msgs = document.getElementById('bf-messages');
-  const g = document.createElement('div');
-  g.className = 'bf-msg user';
-  g.innerHTML = `<div><div class="bf-bubble">${text.replace(/</g,'&lt;')}</div><div class="bf-time">${bfTime()}</div></div><div class="bf-mavatar user">You</div>`;
-  msgs.appendChild(g);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function bfShowTyping() {
-  bfTyping = true;
-  const msgs = document.getElementById('bf-messages');
-  const t = document.createElement('div');
-  t.className = 'bf-typing'; t.id = 'bf-typing';
-  t.innerHTML = `<div class="bf-mavatar bot">BF</div><div class="bf-tdots"><span></span><span></span><span></span></div>`;
-  msgs.appendChild(t);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-
-function bfHideTyping() {
-  bfTyping = false;
-  const t = document.getElementById('bf-typing');
-  if (t) t.remove();
-}
-
-function bfTime() {
-  return new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-
-function bfMd(text) {
-  return text
-    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g,'<em>$1</em>')
-    .replace(/^[-•]\s(.+)$/gm,'<li>$1</li>')
-    .replace(/(<li>[\s\S]*?<\/li>)/g,'<ul>$1</ul>')
-    .replace(/\n\n/g,'</p><p>')
-    .replace(/\n/g,'<br/>')
-    .replace(/^(.)/,'<p>$1')
-    .replace(/(.)$/,'$1</p>');
-}
-
-document.getElementById('bf-input').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); bfSend(); }
-});
-document.getElementById('bf-input').addEventListener('input', function() {
-  this.style.height = 'auto';
-  this.style.height = Math.min(this.scrollHeight, 100) + 'px';
-});
 </script>
 </body>
 </html>
